@@ -1,0 +1,42 @@
+{
+  "name": "Twenty",
+  "slug": "twenty",
+  "categories": [25],
+  "date_created": "2026-02-22",
+  "type": "ct",
+  "updateable": true,
+  "privileged": true,
+  "interface_port": 3000,
+  "documentation": "https://docs.twenty.com/developers/self-host/self-host",
+  "website": "https://twenty.com/",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/twenty.svg",
+  "config_path": "/opt/twenty/.env",
+  "description": "Twenty is the #1 open-source CRM — a modern, powerful, and affordable platform to manage your customer relationships. Built on PostgreSQL with a NestJS backend and React frontend, it offers customizable objects and fields, Kanban and table views, workflow automation, email/calendar sync, and a powerful API. Self-hosted via Docker Compose for full data ownership.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/twenty.sh",
+      "resources": {
+        "cpu": 2,
+        "ram": 4096,
+        "hdd": 20,
+        "os": "debian",
+        "version": "13"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": null,
+    "password": null
+  },
+  "notes": [
+    {
+      "text": "On first access, complete the setup wizard to create your admin account.",
+      "type": "info"
+    },
+    {
+      "text": "This container runs Twenty via Docker Compose (privileged LXC required).",
+      "type": "info"
+    }
+  ]
+}
